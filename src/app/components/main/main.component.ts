@@ -1,3 +1,4 @@
+import { ReviewsComponent } from './../reviews/reviews.component';
 import { Component } from '@angular/core';
 import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
 import { RodapeComponent } from '../rodape/rodape.component';
@@ -6,7 +7,7 @@ import { CardsComponent } from '../cards/cards.component';
 
 @Component({
   selector: 'app-main',
-  imports: [CabecalhoComponent,HeroComponent,RodapeComponent,CardsComponent],
+  imports: [CabecalhoComponent,HeroComponent,RodapeComponent,ReviewsComponent,CardsComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
