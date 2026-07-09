@@ -27,3 +27,11 @@ body {
 .olarwe {
     font-family: 'Olarwe',sans-serif;
 }
+
+.verde-fundo {
+    background-color: #98d4b630;
+}
+
+.verde-destaque {
+    color: #98d4b6;
+}
