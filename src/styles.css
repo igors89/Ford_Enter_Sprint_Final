@@ -19,19 +19,19 @@ body {
 }
 
 .questrial-regular {
-  font-family: "Questrial", sans-serif;
+  font-family: "Questrial", sans-serif !important;
   font-weight: 400;
   font-style: normal;
 }
 
 .olarwe {
-    font-family: 'Olarwe',sans-serif;
+    font-family: 'Olarwe',sans-serif !important;
 }
 
 .verde-fundo {
-    background-color: #98d4b620;
+    background-color: #98d4b620 !important;
 }
 
 .verde-destaque {
-    color: #98d4b6;
+    color: #98d4b6 !important;
 }
