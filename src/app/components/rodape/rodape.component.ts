@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class RodapeComponent {
 
+  voltarAoTopo() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Força o deslizamento suave
+    });
+  }
+
 }

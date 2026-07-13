@@ -1,4 +1,4 @@
-<!-- <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top mx-0" style="background-color: #98cad4;">
+<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top mx-0" style="background-color: #98cad4;">
     <div class="col mb-3">
         <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap">
             <svg class="bi me-2" width="40" height="32" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg>
@@ -36,35 +36,25 @@
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
         </ul>
     </div>
-</footer> -->
+</footer>
 <footer class="row py-4 border-top mx-0 align-items-center azul-fundo">
-    <div class="col mb-3"></div>
-    <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-    </div>
-    
-    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-        <ul class="nav list-unstyled d-flex mb-0">
-            <li class=""><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Twitter"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+    <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start px-md-5">
+        <h5 class="text-dark fw-bold mb-3">Redes Sociais</h5>
+        <ul class="nav flex-column text-center text-md-start">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Facebook</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">LinkedIn</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">YouTube</a></li>
         </ul>
     </div>
 
-    <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-3 mb-md-0 text-center">
-        <h5 class="mb-1 text-dark fw-bold">Sistemas de dados FORD</h5>
+    <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex flex-column justify-content-center align-items-center text-center">
+        <h5 class="mb-2 text-dark fw-bold">Nome do seu Projeto</h5>
         <p class="text-body-secondary mb-0">© 2026 Todos os direitos reservados</p>
     </div>
 
-    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
-        <a href="#topo" class="btn btn-outline-dark">Voltar ao topo</a>
+    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end align-items-center px-md-5">
+        <button (click)="voltarAoTopo()" class="btn btn-outline-dark">Voltar ao topo</button>
     </div>
     
 </footer>
