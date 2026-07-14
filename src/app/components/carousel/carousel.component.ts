@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { ApiReviews, Review } from '../../models/review';
 import { ReviewService } from '../../services/review.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-carousel',
-  imports: [NgFor],
+  imports: [NgFor, FormsModule],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css'
 })
@@ -39,6 +40,11 @@ export class CarouselComponent implements OnInit{
                 this.agruparAvaliacoes(avaliacoes.reviews)
             }
         });
+    }
+
+    suaFuncaoDeSalvar(dadosDoFormulario: any) {
+        console.log("Dados recebidos do modal:", dadosDoFormulario);
+        // Aqui depois fará o POST para a sua API
     }
 
 }
