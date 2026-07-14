@@ -1,4 +1,3 @@
-import { ReviewsComponent } from './../reviews/reviews.component';
 import { Component } from '@angular/core';
 import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
 import { RodapeComponent } from '../rodape/rodape.component';
@@ -8,7 +7,7 @@ import { EspecialidadesComponent } from '../especialidades/especialidades.compon
 
 @Component({
   selector: 'app-main',
-  imports: [CabecalhoComponent,HeroComponent,RodapeComponent,ReviewsComponent,CarouselComponent,EspecialidadesComponent],
+  imports: [CabecalhoComponent,HeroComponent,RodapeComponent,CarouselComponent,EspecialidadesComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
