@@ -41,5 +41,9 @@ html {
 }
 
 .azul-fundo {
-    background-color: #98cad4;
+    background-color: #98cad4 !important;
+}
+
+.azul-destaque {
+    color: #98cad4 !important;
 }
