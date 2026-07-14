@@ -1,13 +1,11 @@
-<div class="container px-4 py-5 my-5" id="avaliacoes">
-    <h2 class="pb-2 border-bottom text-center mb-5">O que nossos clientes dizem</h2>
-    
+<div class="py-5 my-5 verde-fundo" id="avaliacoes">
+    <p class="fs-5 fw-bolder questrial-regular lh-1 mb-3 verde-destaque text-uppercase text-center border-bottom pb-3">Avaliações</p>
+    <h2 class="pb-2 text-center mb-5 questrial-regular fw-semibold">Experiências de quem já caminhou comigo</h2>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        
         <div class="carousel-inner py-3">
-            <div class="carousel-item" *ngFor="let grupo of gruposAvaliacoes; let i = index" [class.active]="i === 0" data-bs-interval="2000">
+            <div class="carousel-item" *ngFor="let grupo of gruposAvaliacoes; let i = index" [class.active]="i === 0" data-bs-interval="4000">
                 <div class="container">
                     <div class="row row-cols-1 row-cols-md-3 g-4 px-5">
-                        
                         <div class="col" *ngFor="let item of grupo">
                             <div class="h-100 p-4 bg-light border rounded-3 text-start shadow-sm d-flex flex-column">
                                 <div class="d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 p-2 mb-3" style="width: 50px; height: 50px;">
@@ -22,12 +20,10 @@
                                 <p class="flex-grow-1 text-secondary">"{{ item.review }}"</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="filter: invert(100%); width: 5%;">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>

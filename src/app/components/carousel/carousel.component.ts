@@ -23,10 +23,10 @@ export class CarouselComponent implements OnInit{
         const grupo = 3; 
         this.gruposAvaliacoes = []; // Limpa grupos antigos
 
-        console.log(data)
-        // for (let i = 0; i < data.length; i += grupo) {
-        //     this.gruposAvaliacoes.push(data.slice(i, i + grupo));
-        // }
+        // console.log(data)
+        for (let i = 0; i < data.length; i += grupo) {
+            this.gruposAvaliacoes.push(data.slice(i, i + grupo));
+        }
     }
 
     carregarReviews(): void {
