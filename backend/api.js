@@ -87,9 +87,9 @@ app.get("/reviews", (req, res) => {
 
 app.post("/review", (req, res) => {
     try {
-        const { nome, nota, avaliacao } = req.body;
+        const { nome, nota, review } = req.body;
 
-        if (!nome || !nota || !avaliacao) {
+        if (!nome || !nota || !review) {
             return res.status(400).json({
                 message: "Por favor, preencha todos os campos: nome, nota e avaliacao."
             });
@@ -99,7 +99,7 @@ app.post("/review", (req, res) => {
             id: avaliacoes.length > 0 ? avaliacoes[avaliacoes.length - 1].id + 1 : 1,
             nome: nome,
             nota: nota,
-            avaliacao: avaliacao
+            review: review
         };
 
         avaliacoes.push(novaAvaliacao);

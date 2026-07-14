@@ -50,7 +50,7 @@
                     <h1 class="modal-title fs-4 fw-bold questrial-regular" id="reviewModalLabel">Deixe sua avaliação</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form #formReview="ngForm" (ngSubmit)="suaFuncaoDeSalvar(formReview.value)">
+                <form #formReview="ngForm" (ngSubmit)="postReview(formReview.value)">
                     <div class="modal-body p-4">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control rounded-3" id="nomeInput" name="nome" placeholder="Seu nome" ngModel required>

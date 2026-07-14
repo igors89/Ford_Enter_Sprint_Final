@@ -11,6 +11,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './carousel.component.css'
 })
 export class CarouselComponent implements OnInit{
+
+    reviewPayload: Omit<Review, 'id'> = {
+        nome: '',
+        nota: 0,
+        review: ''
+    }
   
     constructor(private reviewServ: ReviewService){}
 
@@ -40,9 +46,24 @@ export class CarouselComponent implements OnInit{
         });
     }
 
-    suaFuncaoDeSalvar(dadosDoFormulario: any) {
-        console.log("Dados recebidos do modal:", dadosDoFormulario);
-        // Aqui depois fará o POST para a sua API
+    postReview(dadosDoFormulario: any) {
+        console.log("Dados recebidos do modal: "+dadosDoFormulario.review);
+        const payload: Omit<Review, 'id'> = {
+            nome: dadosDoFormulario.nome,
+            nota: Number(dadosDoFormulario.nota),
+            review: dadosDoFormulario.review
+        };
+
+        this.reviewServ.postReview(payload).subscribe({
+            next: (resposta) => {
+                alert(resposta.message);
+                this.carregarReviews(); 
+            },
+            error: (erro) => {
+                console.error("Erro ao salvar:", erro.message);
+                alert(erro.message);
+            }
+        });
     }
 
 }
