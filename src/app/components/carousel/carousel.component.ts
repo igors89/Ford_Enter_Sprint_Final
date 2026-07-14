@@ -22,9 +22,8 @@ export class CarouselComponent implements OnInit{
 
     agruparAvaliacoes(data: Review[]) {
         const grupo = 3; 
-        this.gruposAvaliacoes = []; // Limpa grupos antigos
+        this.gruposAvaliacoes = [];
 
-        // console.log(data)
         for (let i = 0; i < data.length; i += grupo) {
             this.gruposAvaliacoes.push(data.slice(i, i + grupo));
         }
@@ -36,7 +35,6 @@ export class CarouselComponent implements OnInit{
                 alert("Erro interno! Recarregue a página ou tente novamente mais tarde!");
             },
             next: (avaliacoes: ApiReviews) => {
-                console.log('avaliacoes: '+avaliacoes.reviews)
                 this.agruparAvaliacoes(avaliacoes.reviews)
             }
         });
