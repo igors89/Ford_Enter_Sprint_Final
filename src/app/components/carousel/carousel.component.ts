@@ -11,12 +11,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './carousel.component.css'
 })
 export class CarouselComponent implements OnInit{
-
-    reviewPayload: Omit<Review, 'id'> = {
-        nome: '',
-        nota: 0,
-        review: ''
-    }
   
     constructor(private reviewServ: ReviewService){}
 
