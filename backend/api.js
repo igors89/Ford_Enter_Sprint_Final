@@ -13,16 +13,34 @@ app.use(express.static(path.join(__dirname)));
 let avaliacoes = [
     {
         id: 1,
-        nome: "Ana Silva",
+        nome: "Antônio B.",
         nota: 5,
-        avaliacao: "Excelente sistema, muito rápido!"
+        review: "Profissional excepcional, acolhedora e muito preparada. Transmite segurança e empatia desde o primeiro atendimento. Experiência extremamente positiva!"
     },
     {
         id: 2,
-        nome: "Carlos Eduardo",
-        nota: 4,
-        avaliacao: "Muito bom, mas poderia ter um modo escuro."
-    }
+        nome: "Taianna S.",
+        nota: 5,
+        review: "Excelente profissional! Minha vida mudou completamente!"
+    },
+    {
+        id: 3,
+        nome: "Edson P.",
+        nota: 5,
+        review: "Foi muito importante, me ajudou e ajuda muito, indico com muita tranquilidade, ótima profissional, muito segura, vale a pena fazer uma consulta."
+    },
+    {
+        id: 4,
+        nome: "Carol M.",
+        nota: 5,
+        review: "Uma excelente profissional, extremamente dedicada e acolhedora. Indico de olhos fechados!"
+    },
+    {
+        id: 5,
+        nome: "Carlos S.",
+        nota: 5,
+        review: "Uma pessoa muito humana! Escuta atenciosa e com cuidado em cada detalhe!"
+    },
 ];
 
 app.post("/login", async (req, res) => {
@@ -59,7 +77,7 @@ app.post("/login", async (req, res) => {
 app.get("/reviews", (req, res) => {
     try {
         // Retorna o array contendo id, nome, nota e avaliacao
-        return res.status(200).json(avaliacoes);
+        return res.status(200).json({ reviews: avaliacoes});
     } catch (error) {
         return res.status(500).json({
             message: "Erro ao buscar as avaliações",

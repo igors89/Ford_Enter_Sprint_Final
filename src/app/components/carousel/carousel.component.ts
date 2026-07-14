@@ -23,14 +23,21 @@ export class CarouselComponent implements OnInit{
         const grupo = 3; 
         this.gruposAvaliacoes = []; // Limpa grupos antigos
 
-        for (let i = 0; i < data.length; i += grupo) {
-            this.gruposAvaliacoes.push(data.slice(i, i + grupo));
-        }
+        console.log(data)
+        // for (let i = 0; i < data.length; i += grupo) {
+        //     this.gruposAvaliacoes.push(data.slice(i, i + grupo));
+        // }
     }
 
     carregarReviews(): void {
-        this.reviewServ.getReviews().subscribe((avaliacoes: ApiReviews) => {
-            this.agruparAvaliacoes(avaliacoes.reviews);
+        this.reviewServ.getReviews().subscribe({
+            error: () => {
+                alert("Erro interno! Recarregue a página ou tente novamente mais tarde!");
+            },
+            next: (avaliacoes: ApiReviews) => {
+                console.log('avaliacoes: '+avaliacoes.reviews)
+                this.agruparAvaliacoes(avaliacoes.reviews)
+            }
         });
     }
 
