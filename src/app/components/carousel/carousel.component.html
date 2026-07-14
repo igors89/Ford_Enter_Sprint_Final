@@ -43,15 +43,13 @@
         </button>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="modalAvaliacao" tabindex="-1" aria-labelledby="modalAvaliacaoLabel" aria-hidden="true">
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0 shadow">
-                
                 <div class="modal-header border-bottom-0 pb-0 pt-4 px-4">
-                    <h1 class="modal-title fs-4 fw-bold questrial-regular" id="modalAvaliacaoLabel">Deixe sua avaliação</h1>
+                    <h1 class="modal-title fs-4 fw-bold questrial-regular" id="reviewModalLabel">Deixe sua avaliação</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                
                 <form #formReview="ngForm" (ngSubmit)="suaFuncaoDeSalvar(formReview.value)">
                     <div class="modal-body p-4">
                         <div class="form-floating mb-3">
