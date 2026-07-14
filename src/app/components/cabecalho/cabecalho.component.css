@@ -1,0 +1,24 @@
+/* 1. O Botão Customizado com Hover */
+.btn-outline-verde {
+    color: #212529; /* Texto escuro por padrão */
+    border: 2px solid #98d4b6;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out; /* Deixa a animação bem suave */
+}
+
+.btn-outline-verde:hover {
+    background-color: #98d4b6;
+    color: #212529; /* Mantém o texto escuro sobre o fundo verde claro para leitura */
+    border-color: #98d4b6;
+}
+
+/* 2. Efeito de Hover nos Links do Menu */
+.nav-link-custom {
+    color: #212529; /* Cor base do link */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #98d4b6; /* Fica verde ao passar o mouse */
+}
