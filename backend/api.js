@@ -76,7 +76,6 @@ app.post("/login", async (req, res) => {
 
 app.get("/reviews", (req, res) => {
     try {
-        // Retorna o array contendo id, nome, nota e avaliacao
         return res.status(200).json({ reviews: avaliacoes});
     } catch (error) {
         return res.status(500).json({
@@ -88,17 +87,14 @@ app.get("/reviews", (req, res) => {
 
 app.post("/review", (req, res) => {
     try {
-        // Recebe os dados do corpo da requisição (body)
         const { nome, nota, avaliacao } = req.body;
 
-        // Validação simples para garantir que os dados vieram corretos
         if (!nome || !nota || !avaliacao) {
             return res.status(400).json({
                 message: "Por favor, preencha todos os campos: nome, nota e avaliacao."
             });
         }
 
-        // Cria o novo objeto simulando um ID auto-incrementado
         const novaAvaliacao = {
             id: avaliacoes.length > 0 ? avaliacoes[avaliacoes.length - 1].id + 1 : 1,
             nome: nome,
@@ -106,7 +102,6 @@ app.post("/review", (req, res) => {
             avaliacao: avaliacao
         };
 
-        // Adiciona a nova avaliação ao array em memória
         avaliacoes.push(novaAvaliacao);
 
         return res.status(201).json({
