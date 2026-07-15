@@ -59,13 +59,19 @@ export class PainelComponent implements OnInit {
     }
 
     lembreteSessao(p: Paciente): void {
-        const contato = this.formatarContato(p.contato);
-        alert(`Mensagem para ${contato}:\n\n Olá, ${p.nome}, como vai? Sua próxima sessão será em breve! Você poderá comparecer? Por favor, confirme sua presença assim que possível! Obrigada!`);
+        const numeroLimpo = p.contato.toString().replace(/\D/g, '');
+        const numeroWhatsApp = `55${numeroLimpo}`;
+        const mensagem = `Olá, ${p.nome}, como vai? Sua próxima sessão será em breve! Você poderá comparecer? Por favor, confirme sua presença assim que possível! Obrigada!`;
+        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+        window.open(url, '_blank');
     }
 
     lembretePagamento(p: Paciente): void {
-        const contato = this.formatarContato(p.contato);
-        alert(`Mensagem para ${contato}:\n\n Olá, ${p.nome}, tudo bom? Até o momento não identifiquei o seu pagamento das sessões! Por favor, peço que regularize para podermos continuar com as sessões! Caso já estiver regularizado, por favor desconsidere esta mensagem! Obrigada!`);
+        const numeroLimpo = p.contato.toString().replace(/\D/g, '');
+        const numeroWhatsApp = `55${numeroLimpo}`;
+        const mensagem = `Olá, ${p.nome}, como vai? Até o momento não identifiquei o seu pagamento das sessões! Por favor, peço que regularize para podermos continuar com as sessões! Caso já estiver regularizado, por favor desconsidere esta mensagem! Obrigada!`;
+        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+        window.open(url, '_blank');
     }
 
     logout(): void {
