@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-cabecalho',
@@ -40,7 +42,14 @@ export class CabecalhoComponent {
             return
           },
           next: () => {
-            this.router.navigate(['home'])
+            const modalElement = document.getElementById('loginModal');
+            const modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (modalInstance) {
+                modalInstance.hide();
+            }
+            setTimeout(() => {
+                this.router.navigate(['panel'])
+            }, 300);
           }
         });
       }

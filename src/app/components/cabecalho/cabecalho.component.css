@@ -22,3 +22,26 @@
 .nav-link-custom:hover {
     color: #98d4b6; /* Fica verde ao passar o mouse */
 }
+
+.btn-outline-verde {
+    color: #212529; /* Texto escuro por padrão */
+    border: 2px solid #98d4b6; /* Borda na sua cor verde clara */
+    background-color: transparent;
+    /* A propriedade transition cria a animação suave de fundo, cor e sombra */
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-outline-verde:not(:disabled):hover {
+    background-color: #98d4b6; /* Preenche com o verde claro */
+    color: #212529; /* Mantém o texto escuro para dar leitura */
+    border-color: #98d4b6;
+    transform: translateY(-2px); /* Dá uma leve flutuada para cima */
+    box-shadow: 0 5px 15px rgba(152, 212, 182, 0.4); /* Cria uma sombra verde suave */
+    cursor: pointer;
+}
+
+.btn-outline-verde:disabled {
+    border-color: #dee2e6;
+    color: #adb5bd;
+    background-color: transparent;
+}
