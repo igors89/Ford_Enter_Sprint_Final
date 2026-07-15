@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
 import { ApiReviews, Review } from '../../models/review';
 import { ReviewService } from '../../services/review.service';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-carousel',
-  imports: [NgFor, FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css'
 })
