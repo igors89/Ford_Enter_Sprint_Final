@@ -43,6 +43,42 @@ let avaliacoes = [
     },
 ];
 
+let pacientes = [
+    { id: 1, nome: "João Silva", contato: 11999999999, dataInicio: 1768446000000 },
+    { id: 2, nome: "Maria Souza", contato: 11988888888, dataInicio: 1770951600000 }
+];
+
+app.get("/pacientes", (req, res) => {
+    try {
+        return res.status(200).json({ pacientes: pacientes });
+    } catch (error) {
+        return res.status(500).json({ message: "Erro ao buscar pacientes", error: String(error) });
+    }
+});
+
+app.post("/paciente", (req, res) => {
+    try {
+        const { nome, contato, dataInicio } = req.body;
+
+        if (!nome || !contato || !dataInicio) {
+            return res.status(400).json({ message: "Preencha todos os campos." });
+        }
+
+        const novoPaciente = {
+            id: pacientes.length > 0 ? pacientes[pacientes.length - 1].id + 1 : 1,
+            nome: nome,
+            contato: Number(contato),
+            dataInicio: Number(dataInicio)
+        };
+
+        pacientes.push(novoPaciente);
+
+        return res.status(201).json({ message: "Paciente cadastrado com sucesso!", novoPaciente });
+    } catch (error) {
+        return res.status(500).json({ message: "Erro ao cadastrar paciente", error: String(error) });
+    }
+});
+
 app.post("/login", async (req, res) => {
     try {
         
