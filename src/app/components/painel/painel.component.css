@@ -1,0 +1,11 @@
+.btn-outline-verde {
+    color: #212529;
+    border: 2px solid #98d4b6;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-verde:hover {
+    background-color: #98d4b6;
+    color: #fff; /* Opcional: texto branco se o verde for escuro o suficiente */
+}

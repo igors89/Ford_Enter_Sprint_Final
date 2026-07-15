@@ -44,8 +44,36 @@ let avaliacoes = [
 ];
 
 let pacientes = [
-    { id: 1, nome: "João Silva", contato: 11999999999, dataInicio: 1768446000000 },
-    { id: 2, nome: "Maria Souza", contato: 11988888888, dataInicio: 1770951600000 }
+    { 
+        id: 1, 
+        nome: "João Silva", 
+        contato: 71999887777, 
+        dataInicio: 1768446000000 
+    },
+    { 
+        id: 2, 
+        nome: "Maria Souza", 
+        contato: 11988231476, 
+        dataInicio: new Date('2026-05-20T00:00:00').getTime() 
+    },
+    { 
+        id: 3, 
+        nome: "José Luis", 
+        contato: 71981162025, 
+        dataInicio: new Date('2026-07-07T00:00:00').getTime() 
+    },
+    { 
+        id: 4, 
+        nome: "Giulia Santos", 
+        contato: 71988231476, 
+        dataInicio: new Date('2025-09-27T00:00:00').getTime() 
+    },
+    { 
+        id: 5, 
+        nome: "Carlos Santos", 
+        contato: 73988231476, 
+        dataInicio: new Date('2025-11-16T00:00:00').getTime() 
+    },
 ];
 
 app.get("/pacientes", (req, res) => {

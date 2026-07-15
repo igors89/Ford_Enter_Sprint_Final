@@ -26,6 +26,11 @@ export class PainelComponent implements OnInit {
         this.carregarPacientes();
     }
 
+    formatarContato(contato: number | string): string {
+        const c = contato.toString().replace(/\D/g, '');
+        return c.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+    }
+
     carregarPacientes(): void {
         this.cadServ.getPacientes().subscribe({
             next: (res) => this.pacientes = res.pacientes,
@@ -54,11 +59,13 @@ export class PainelComponent implements OnInit {
     }
 
     lembreteSessao(p: Paciente): void {
-        alert(`Enviando WhatsApp de SESSÃO para:\nNome: ${p.nome}\nContato: ${p.contato}`);
+        const contato = this.formatarContato(p.contato);
+        alert(`Mensagem para ${contato}:\n\n Olá, ${p.nome}, como vai? Sua próxima sessão será em breve! Você poderá comparecer? Por favor, confirme sua presença assim que possível! Obrigada!`);
     }
 
     lembretePagamento(p: Paciente): void {
-        alert(`Enviando WhatsApp de PAGAMENTO para:\nNome: ${p.nome}\nContato: ${p.contato}`);
+        const contato = this.formatarContato(p.contato);
+        alert(`Mensagem para ${contato}:\n\n Olá, ${p.nome}, tudo bom? Até o momento não identifiquei o seu pagamento das sessões! Por favor, peço que regularize para podermos continuar com as sessões! Caso já estiver regularizado, por favor desconsidere esta mensagem! Obrigada!`);
     }
 
     logout(): void {
