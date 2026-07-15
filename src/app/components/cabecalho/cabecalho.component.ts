@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { LoginService } from '../../services/login.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +8,7 @@ declare var bootstrap: any;
 
 @Component({
   selector: 'app-cabecalho',
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule, RouterLink],
   templateUrl: './cabecalho.component.html',
   styleUrl: './cabecalho.component.css'
 })

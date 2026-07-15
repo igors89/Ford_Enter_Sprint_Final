@@ -18,10 +18,6 @@ body {
     /* width: 100vw; */
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 .questrial-regular {
   font-family: "Questrial", sans-serif !important;
   font-weight: 400;
